@@ -9,7 +9,7 @@ https://ddingg.tistory.com/44
 
 3. Annotation들과 JPA에 대한 학습 필요. Entity를 구성하는 것 까지 완료.
 
----
+---w
 
 # 스터디 2주차
 
@@ -19,14 +19,13 @@ https://ddingg.tistory.com/44
 ![temporage_db](https://user-images.githubusercontent.com/29707967/72516191-9be4cd80-3894-11ea-8d1b-1f4ab56da826.png)
 
 #### DB 생성 쿼리  
-CREATE SEQUENCE seq_id START 1;
+CREATE SEQUENCE seq_id START 1; 
 
 -- Table: public.temporage_data
 
 -- DROP TABLE public.temporage_data;
 ```
-
-CREATE TABLE public.temporage_data  
+CREATE TABLE public.temporage_data   
 (
     id integer NOT NULL DEFAULT nextval('seq_id'::regclass),
     key text COLLATE pg_catalog."default" NOT NULL,
@@ -74,3 +73,15 @@ ALTER TABLE public.temporage_data OWNER to postgres;
 - 로그인 세션
 - 공유 기능
 - CI/CD 완성 시키기
+
+---
+
+##result_code
+
+```
+0 : unexecpt error
+1 : success
+2 : email is not correct
+3 : password is not correct
+4 : Session ID is not correct 
+```
